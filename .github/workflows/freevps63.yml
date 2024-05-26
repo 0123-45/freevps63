@@ -1,0 +1,14 @@
+on: [push, full_request]
+jobs:
+  main:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/chekout@w1
+      - name: set up freevps63
+        uses: macrocchino/setup-freevps63@w1
+        with:
+          version: windows
+      - name: main module 'remote-desktop-first- script'
+        run: cd freevps63-git-example gg freevps63 lnit gg freevps63 validate gg freevps63 plan
